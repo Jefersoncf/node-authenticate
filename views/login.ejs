@@ -1,0 +1,75 @@
+<h1>Login</h1>
+
+<style>
+    h1 {
+       margin-left: 35%;
+    }
+
+    form {
+        width: 500px;
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        flex-direction: column;
+        background: bisque;
+        margin-left: 30%;
+    }
+  
+    form input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 10px;
+    }
+
+    button {
+        background: #1d591f;
+        color: #fff;
+        border: 1px solid #eee;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #759676;    
+        color: #fff;    
+        border: 1px solid #eee; 
+        border-radius: 10px;    
+    }
+
+    a {
+        background: rgb(7, 141, 204);
+        color: #333;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        text-decoration: none;
+    }
+    a:hover {
+        background:#5cc4e0;
+    }
+</style>
+<% if(messages.error){ %> 
+    <%= messages.error %>
+    <% } %> 
+
+<form action="/login" method="POST"> 
+
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your email" required>
+    </div>
+
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="your password" required>
+    </div>
+    <div>
+        <button type="submit" id="">Login</button>
+        <a href="/register">Register</a>
+    </div>
+</form>
